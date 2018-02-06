@@ -10,6 +10,7 @@
       <TargetName>mbed_default</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -51,9 +52,9 @@
           <OutputName>mbed_default</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
+          <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\BUILD\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -108,14 +109,14 @@
           <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
-          <SimDllName></SimDllName>
-          <SimDllArguments> </SimDllArguments>
-          <SimDlgDll>DCM.DLL</SimDlgDll>
-          <SimDlgDllArguments></SimDlgDllArguments>
+          <SimDllName>SARMCM3.DLL</SimDllName>
+          <SimDllArguments> -MPU</SimDllArguments>
+          <SimDlgDll>TCM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pLPC1768</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments></TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-pLPC1768</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -256,27 +257,27 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x20000</Size>
+                <Size>0x40000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -297,8 +298,8 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20000000</StartAddress>
-                <Size>0x2000</Size>
+                <StartAddress>0x10000000</StartAddress>
+                <Size>0x8000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -353,7 +354,7 @@
               <MiscControls>--cpreproc --cpreproc_opts=-D__ASSERT_MSG,-D__CMSIS_RTOS,-D__MBED_CMSIS_RTOS_CM,-D__CORTEX_M3,-DARM_MATH_CM3</MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.; mbed-os/.; mbed-os/features; mbed-os/features/frameworks; mbed-os/features/frameworks/greentea-client; mbed-os/features/frameworks/greentea-client/greentea-client; mbed-os/features/frameworks/greentea-client/source; mbed-os/features/frameworks/unity; mbed-os/features/frameworks/unity/source; mbed-os/features/frameworks/unity/unity; mbed-os/features/frameworks/utest; mbed-os/features/frameworks/utest/source; mbed-os/features/frameworks/utest/utest; mbed-os/features/mbedtls; mbed-os/features/mbedtls/importer; mbed-os/features/mbedtls/inc; mbed-os/features/mbedtls/inc/mbedtls; mbed-os/features/mbedtls/src; mbed-os/features/mbedtls/platform; mbed-os/features/mbedtls/platform/inc; mbed-os/features/mbedtls/platform/src; mbed-os/features/mbedtls/targets; mbed-os/features/nanostack; mbed-os/features/storage; mbed-os/features/netsocket; mbed-os/features/netsocket/cellular; mbed-os/features/netsocket/cellular/generic_modem_driver; mbed-os/features/netsocket/cellular/utils; mbed-os/features/filesystem; mbed-os/features/filesystem/bd; mbed-os/features/filesystem/fat; mbed-os/features/filesystem/fat/ChaN; mbed-os/features/filesystem/littlefs; mbed-os/features/filesystem/littlefs/TESTS_COMMON; mbed-os/features/filesystem/littlefs/littlefs; mbed-os/cmsis; mbed-os/cmsis/TARGET_CORTEX_M; mbed-os/drivers; mbed-os/events; mbed-os/events/equeue; mbed-os/rtos; mbed-os/rtos/TARGET_CORTEX; mbed-os/rtos/TARGET_CORTEX/rtx4; mbed-os/rtos/TARGET_CORTEX/rtx5; mbed-os/rtos/TARGET_CORTEX/rtx5/Include; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Config; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Include; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_ARM; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_ARM/TARGET_M3; mbed-os/rtos/TARGET_CORTEX/rtx5/Source; mbed-os/hal; mbed-os/hal/storage_abstraction; mbed-os/platform; mbed-os/targets; mbed-os/targets/TARGET_NXP; mbed-os/targets/TARGET_NXP/TARGET_LPC176X; mbed-os/targets/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768; mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device; mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device/TOOLCHAIN_ARM_STD; mbed-os/features/FEATURE_LWIP; mbed-os/features/FEATURE_LWIP/lwip-interface; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_NXP; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_NXP/TARGET_LPCTarget; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-sys; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-sys/arch; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/api; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/core; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv4; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv6; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/priv; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/prot; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp/polarssl; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/netif; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp/polarssl; </IncludePath>
+              <IncludePath>.; mbed-os/.; mbed-os/features; mbed-os/features/frameworks; mbed-os/features/frameworks/greentea-client; mbed-os/features/frameworks/greentea-client/greentea-client; mbed-os/features/frameworks/greentea-client/source; mbed-os/features/frameworks/unity; mbed-os/features/frameworks/unity/source; mbed-os/features/frameworks/unity/unity; mbed-os/features/frameworks/utest; mbed-os/features/frameworks/utest/source; mbed-os/features/frameworks/utest/utest; mbed-os/features/mbedtls; mbed-os/features/mbedtls/importer; mbed-os/features/mbedtls/inc; mbed-os/features/mbedtls/inc/mbedtls; mbed-os/features/mbedtls/src; mbed-os/features/mbedtls/platform; mbed-os/features/mbedtls/platform/inc; mbed-os/features/mbedtls/platform/src; mbed-os/features/mbedtls/targets; mbed-os/features/nanostack; mbed-os/features/storage; mbed-os/features/netsocket; mbed-os/features/netsocket/cellular; mbed-os/features/netsocket/cellular/generic_modem_driver; mbed-os/features/netsocket/cellular/utils; mbed-os/features/filesystem; mbed-os/features/filesystem/bd; mbed-os/features/filesystem/fat; mbed-os/features/filesystem/fat/ChaN; mbed-os/features/filesystem/littlefs; mbed-os/features/filesystem/littlefs/TESTS_COMMON; mbed-os/features/filesystem/littlefs/littlefs; mbed-os/cmsis; mbed-os/cmsis/TARGET_CORTEX_M; mbed-os/drivers; mbed-os/events; mbed-os/events/equeue; mbed-os/rtos; mbed-os/rtos/TARGET_CORTEX; mbed-os/rtos/TARGET_CORTEX/rtx4; mbed-os/rtos/TARGET_CORTEX/rtx5; mbed-os/rtos/TARGET_CORTEX/rtx5/Include; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Config; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Include; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_ARM; mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source/TOOLCHAIN_ARM/TARGET_M3; mbed-os/rtos/TARGET_CORTEX/rtx5/Source; mbed-os/hal; mbed-os/hal/storage_abstraction; mbed-os/platform; mbed-os/targets; mbed-os/targets/TARGET_NXP; mbed-os/targets/TARGET_NXP/TARGET_LPC176X; mbed-os/targets/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768; mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device; mbed-os/targets/TARGET_NXP/TARGET_LPC176X/device/TOOLCHAIN_ARM_STD; mbed-os/features/FEATURE_LWIP; mbed-os/features/FEATURE_LWIP/lwip-interface; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_NXP; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-eth/arch/TARGET_NXP/TARGET_LPCTarget; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-sys; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip-sys/arch; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/api; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/core; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv4; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/core/ipv6; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/priv; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/lwip/prot; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/include/netif/ppp/polarssl; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/netif; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp; mbed-os/features/FEATURE_LWIP/lwip-interface/lwip/src/netif/ppp/polarssl</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
