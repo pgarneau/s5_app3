@@ -4015,6 +4015,11 @@
               <FileType>5</FileType>
               <FilePath>mbed_config.h</FilePath>
             </File>
+            <File>
+              <FileName>xbee.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\xbee.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
